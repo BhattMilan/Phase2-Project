@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="add-route-form" class="class-add-route-form">
+		<form action="addRoute" method="get">
+			<label id="lbl-soure" for="source"> From </label> <br>
+			<input type="text" id="addSource" name="addSource" pattern="^[a-zA-Z ]*$" required="required"> <br>
+			
+			<label id="lbl-destination" for="destination"> To </label> <br>
+			<input type="text" id="addDest" name="addDest" pattern="^[a-zA-Z ]*$" required="required"> <br>
+			
+			<label id="lbl-date" for="date"> Select Date </label> <br>
+			<input type="date" id="addDate" name="addDate" required="required"> <br>
+			
+			<label id="lbl-flightNumber" for="flightNumber"> Flight Number </label> <br>
+			<input type="text" id="fNumber" name="flightNumber" required="required"> <br>
+			
+			<label id="lbl-flightName" for="flightName"> Flight Name </label> <br>
+			<input type="text" id="fName" name="flightName" pattern="^[a-zA-Z ]*$" required="required"> <br>
+			
+			<label id="lbl-price" for="price"> Price </label> <br>
+			<input type="text" id="price" name="price" required="required"> <br>
+			
+			<label id="lbl-departureTime" for="departureTime"> Departure Time </label> <br>
+			<input type="time" id="deptTime" name="departureTime" required="required"> <br>
+			
+			<label id="lbl-arrivalTime" for="arrivalTime"> Arrival Time </label> <br>
+			<input type="time" id="arrTime" name="arrivalTime" required="required"> <br>
+			
+			<label id="lbl-avaSeats" for="avaSeats"> Available Seats </label> <br>
+			<input type="text" id="avaiSeats" name="availableSeats" required="required"> <br>
+			<input type="submit" value="Add Flight">
+		</form>
+	</div>
+</body>
+</html>

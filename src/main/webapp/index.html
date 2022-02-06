@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Fly-Away</title>
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+	<div id="mainDiv" class="class-mainDiv">
+		<div class="title">
+			<h1>Fly-Away</h1>
+		</div>
+		
+		<div class="searchResForm">
+			<form action="searchResultPage" method="get">
+				<label for="from" id="from"> From:  </label> <br> 
+				<input type="text" name="sourceRoute"> <br>
+				<label for="to" id="to"> To:  </label> <br>
+				<input type="text" name="destinationRoute"> <br>
+				<label for="deptDate" id="deptDate"> Departure Date:  </label> <br>
+				<input type="date" id="deptDate" name="deptDate"> <br>
+				<input type="submit" id="search" name="search" value="search"> <br>
+			</form>
+			<input type="button" onclick="location.href='login.html'" value="Login">
+			<input type="button" onclick="location.href='registration.html'" value="Create account">
+		</div>
+	</div>
+</body>
+</html>

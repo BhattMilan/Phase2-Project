@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>Phase2 Assesment Flyaway</display-name>
+   
+   <servlet>
+   	<servlet-name>loginServlet</servlet-name>
+   	<servlet-class>com.LoginServlet</servlet-class>
+   </servlet>
+   <servlet-mapping>
+   	<servlet-name>loginServlet</servlet-name>
+   	<url-pattern>/loginRequired</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+   	<servlet-name>logoutServlet</servlet-name>
+   	<servlet-class>com.LogoutServlet</servlet-class>
+   </servlet>
+   <servlet-mapping>
+   	<servlet-name>logoutServlet</servlet-name>
+   	<url-pattern>/logout</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+   	<servlet-name>registration</servlet-name>
+   	<servlet-class>com.RegistrationServlet</servlet-class>
+   </servlet>
+   <servlet-mapping>
+   	<servlet-name>registration</servlet-name>
+   	<url-pattern>/registrationUser</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+   	<servlet-name>searchResult</servlet-name>
+   	<servlet-class>com.SearchResultServlet</servlet-class>
+   </servlet>
+   <servlet-mapping>
+   	<servlet-name>searchResult</servlet-name>
+   	<url-pattern>/searchResultPage</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+   	<servlet-name>bookingServlet</servlet-name>
+   	<servlet-class>com.BookingServlet</servlet-class>
+   </servlet>
+   <servlet-mapping>
+   	<servlet-name>bookingServlet</servlet-name>
+   	<url-pattern>/bookTicket</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+   	<servlet-name>AddRouteServlet</servlet-name>
+   	<servlet-class>com.AddRouteServlet</servlet-class>
+   </servlet>
+   <servlet-mapping>
+   	<servlet-name>AddRouteServlet</servlet-name>
+   	<url-pattern>/addRoute</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+   	<servlet-name>DeleteRouteServlet</servlet-name>
+   	<servlet-class>com.DeleteRouteServlet</servlet-class>
+   </servlet>
+   <servlet-mapping>
+   	<servlet-name>DeleteRouteServlet</servlet-name>
+   	<url-pattern>/deleteRoute</url-pattern>
+   </servlet-mapping>
+   
+   <!-- FILTER IMPLEMENTATION -->
+	   <filter>
+	  	<filter-name>RegValidation</filter-name>
+	  	<filter-class>com.RegistrationValidationFilter</filter-class>
+	  </filter>
+	  <filter-mapping>
+	  	<filter-name>RegValidation</filter-name>
+	  	<url-pattern>/registrationUser</url-pattern>
+	  </filter-mapping>
+	  
+	  <filter>
+	  	<filter-name>loginFilter</filter-name>
+	  	<filter-class>com.LoginFilter</filter-class>
+	  </filter>
+	  <filter-mapping>
+	  	<filter-name>loginFilter</filter-name>
+	  	<url-pattern>/logout</url-pattern>
+	  </filter-mapping>
+	  
+<!-- 	   <filter> -->
+<!-- 	  	<filter-name>dateFilter</filter-name> -->
+<!-- 	  	<filter-class>com.DateFilter</filter-class> -->
+<!-- 	  </filter> -->
+<!-- 	  <filter-mapping> -->
+<!-- 	  	<filter-name>dateFilter</filter-name> -->
+<!-- 	  	<url-pattern>/searchResultPage</url-pattern> -->
+<!-- 	  </filter-mapping> -->
+<!-- 	  <filter-mapping> -->
+<!-- 	  	<filter-name>dateFilter</filter-name> -->
+<!-- 	  	<url-pattern>/AddFlight.html</url-pattern> -->
+<!-- 	  </filter-mapping>  -->
+   
+</web-app>
